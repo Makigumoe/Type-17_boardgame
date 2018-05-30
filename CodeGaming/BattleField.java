@@ -41,4 +41,20 @@ public class BattleField {
         for (int i = 0; i < buffs_copy.size(); i++)
             cu.buff_enter_ground(player, buffs_copy.get(i), ground);
     }
+
+    public Character new_character(String name,
+                                   String info,
+                                   int hp) {
+        Character a_character = new Character();
+        if (info == "")
+            info = "暂无简介";
+        a_character.name = name;
+        a_character.info = info;
+        a_character.hp = hp;
+        a_character.hp_current = hp;
+        a_character.position = 0.5;
+        a_character.current_ground = new Ground();
+        a_character.current_ground.name = "岩石";
+        return a_character;
+    }
 }

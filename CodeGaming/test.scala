@@ -11,22 +11,12 @@ object test {
 
   def main(args: Array[String]): Unit = {
 
+    //设置战锤
+    val battleField = new BattleField
     //设置玩家
-    val player = new Character
-    player.name = "The Elder One"
-    player.info = "Testing methods"
-    player.position = 0.5
-    player.hp = 8
-    player.hp_current = 7
+    val player = battleField.new_character("The Elder One", "", 10)
     //设置敌人
-    val enermy = new Character
-    enermy.name = "The Mortal"
-    enermy.info = "weak"
-    enermy.hp = 10
-    enermy.hp_current = 10
-    enermy.position = 0.5
-    enermy.current_ground = new Ground
-    enermy.current_ground.name = "岩石"
+    val enermy = battleField.new_character("The Mortal", "", 2)
     //测试打印信息
     println(player.toString)
     println(enermy.toString)

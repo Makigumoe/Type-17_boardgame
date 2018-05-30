@@ -100,7 +100,6 @@ public class SkillUtils {
             if (caster.act_able())
                 caster.move();
         if (caster.act_able()) {
-            System.out.println("kaishi");
             //把额外消耗，和这张牌都移入弃牌堆
             //
             //开始造成伤害
